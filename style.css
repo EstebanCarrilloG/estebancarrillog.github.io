@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Roboto&family=Secular+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    
+}
+html{
+  
+  scroll-behavior: smooth;
+}
+
+body{
+  background:#d9d8d8ad;
+  font-size: 17px;
+ 
+  
+}
+img{
+  width:100%;
+}
+ul li{
+  list-style: none;
+}
+
+
+:root{
+  --max-width-container:80em;
+  --width-container:100%;
+  --color-1:#e51e21;
+  --color-2:#002665;
+  --color-3:white;
+  --color-4:#3eab34;
+  --padding-container:10em 5em;
+  --karla-font:'Karla', sans-serif;
+  --roboto-font:'Roboto', sans-serif;
+  --logo-font:'Secular One', sans-serif;
+  
+
+}
+.container{
+  max-width: var(--max-width-container);
+  width: var(--width-container);
+  padding:var(--padding-container);
+  margin: 0 auto;
+ 
+}
+
+.header{
+  background: var(--color-2);
+  position: sticky;
+  top:0;
+
+  width: 100%;
+  padding:0 2em; 
+  z-index: 9999;
+
+}
+
+.header-container{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding:1em 0;
+  
+
+}
+
+
+  
+  
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    width: 10.25em;
+  }
+
+
+
+  .logo__img{
+    width: 100%;
+    display: block;
+
+  }
+  
+  .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 1.8em;
+    height: 3px;
+    margin: 3px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-3);
+}
+  
+ nav{
+   background:var(--color-2);
+ }
+  
+
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-transform: uppercase;
+    font-family: var(--roboto-font);
+    color: #fff;
+    display: block;
+    padding: 20px 10px;
+    text-decoration: none;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+  }
+  
+  nav ul li a:hover {
+    color: var(--color-4);
+  }
+  
+  nav ul li a span {
+    margin-right: 10px;
+  }
+  
+  nav ul li:hover .children {
+    display: block;
+  }
+  
+  nav ul li .children {
+    display: none;
+    background: #011826;
+    position: absolute;
+    width: 150%;
+    z-index: 1000;
+  }
+  
+  nav ul li .children li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+  
+  nav ul li .children li a {
+    display: block;
+  }
+  
+  nav ul li .children li a span {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  
+  nav ul li .caret {
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  .header-tumbnail{
+    text-align: center;
+    background: linear-gradient(rgb(0 38 101 / 33%), rgb(10 17 28 / 55%)), url(assets/wiltronic\ inside.jpg) no-repeat center/cover;
+    
+    
+    
+  }
+
+  .tumbnail__content{
+    height: 100vh;
+    display: flex;
+    gap:1.2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:var(--padding-container);
+    word-wrap: break-word;
+    color: var(--color-3);
+    font-family: var(--karla-font);
+  }
+  
+  .tumbnail__content h2{
+    
+    font-size: 3.5em;
+    letter-spacing: 5px;
+  
+  }
+
+ 
+  
+  @keyframes sliding-vertically {
+    from {
+      margin-top: 0%;
+      
+    }
+  
+    to {
+      margin-top: 1%;
+      
+    }
+  }
+  .tumbnail__content i{
+  
+    font-size:1.5em;
+  }
+  
+
+  /* Secciones */
+
+
+
+.about-container{
+  background:var(--color-3);
+  text-align: center;
+ 
+  
+}
+
+.about-content{
+  display:flex;
+  gap:6em;
+}
+
+.about-content .section-paragraph{
+  text-align:justify;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about-imgs{
+  width:60em;
+}
+.about-img{ 
+  margin:0 auto;
+}
+
+.section-paragraph p{
+  line-height: 1.7em;
+  padding-bottom: 1em;
+}
+.section-paragraph p:nth-child(3){
+  padding-bottom: 0.5em;
+}
+
+.section-paragraph  ul li{
+  margin:0;
+  padding:0;
+  list-style:disc;
+  list-style-position: inside;
+
+}
+
+.section-title{
+  font-family: var(--karla-font);
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+}
+
+.section-title:after{
+  content:"";
+  display: block;
+  width:10%;
+  margin:0 auto;
+  height: 0.2em;
+  margin-top: 4px;
+  background:var(--color-1) ;
+
+}
+
+.section-paragraph{
+  font-family: var(--roboto-font);
+  text-align: center;
+  line-height: 2em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+
+.products{
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/wiltronic-logo.png) no-repeat center center/cover;
+  background-attachment: fixed;
+}
+.products h2,.products p{
+  color: var(--color-3);
+}
+.products-container{
+text-align: center;
+}
+.products-content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:0.5em;
+
+}
+.product{
+  transition: transform 0.5s;
+}
+
+.product:hover{
+transform:scale(1.2,1.2);
+z-index: 99;
+border:3px solid var(--color-2)
+}
+.cta{
+  display: inline-block;
+  background: transparent;
+  padding: 1em 2em;
+  margin-top:1em;
+  text-decoration: none;
+  color: var(--color-3);
+  border-radius: 10px;
+  font-family: var(--roboto-font);
+  font-size: 1.5em;
+  border: 3px solid var(--color-3);
+  transition: background 0.01s,color 0.2s;
+
+
+}
+
+.cta:hover{
+  background: var(--color-3);
+  color: #3eab34;
+
+}
+
+.services-container{
+  background: var(--color-3);
+
+}
+.services-content{
+  display:grid;
+  grid-template-columns: auto auto;
+  padding:0 0.5em
+}
+
+.service{
+  z-index: 1;
+  height:20em;
+  max-height: 20em;
+  overflow:hidden;
+  position: relative;
+  
+  
+  
+}
+
+
+.n1-epe{
+  
+  
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/proyectos.jpg) no-repeat center center/cover;
+  
+}
+.n2-depcb{
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/diseño\ pcbs.jpg) no-repeat center center/cover;
+
+}
+
+.n3-vce{
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/componentes\ electronicos.jpg) no-repeat center center/cover;
+
+}
+
+.n4-rc{
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/reparacion\ de\ celulares.jpg) no-repeat center center/cover;
+
+}
+
+
+
+
+
+
+
+
+.service h3{ 
+  font-size: 1.5em;
+  position: absolute;
+  right: 0;
+  bottom: 2em;
+  left: 0;
+  margin: auto;
+  padding: 1em 2em;
+  font-family: var(--roboto-font);
+  color:var(--color-3);
+  letter-spacing: 3px;
+  text-align: center;
+  transition: bottom 0.2s;
+
+}
+
+.service h3:hover{
+  bottom: 3em;
+  
+}
+
+.contact{
+  background: linear-gradient(to bottom, #bdc3c76b, #2c3e50), url(assets/businesswoman-looking-important-contact-on-phone.jpg) no-repeat center center/cover; 
+  background-attachment: fixed;
+  text-align: center;
+  color:white;
+}
+
+.contact-container{
+  background: initial;
+  padding:10em 0
+}
+
+.contact-info{
+  font-family: var(--roboto-font);
+  line-height: 2em;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.contact-info ul li i{
+  margin-right: 0.5em;
+}
+
+/* footer */
+#footer {
+  background:var(--color-2);
+  font-family: var(--roboto-font);
+}
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding:3em 0;
+}
+
+.footer-links {
+  display: inline-flex;
+  gap: 10em;
+  margin-bottom: 3em;
+}
+
+.footer-links__section {
+  margin-bottom: 2em;
+}
+
+.footer-social {
+  display: block;
+}
+
+#footer h5 {
+  padding-left: 10px;
+  border-left: 3px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.footer-social__ul {
+  display: inline-flex;
+  gap: 1em;
+}
+
+#footer ul.footer-social__ul li {
+  padding: 3px 0;
+}
+
+#footer ul.footer-social__ul li a i {
+  margin-right: 5px;
+  font-size: 25px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+#footer ul.footer-social__ul li:hover a i {
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+#footer ul.footer-social__ul li a,
+#footer ul.quick-links li a {
+  color: #ffffff;
+}
+
+#footer ul.footer-social__ul li a:hover {
+  color: #eeeeee;
+}
+
+#footer ul.quick-links li {
+  padding: 3px 0;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+#footer ul.quick-links li:hover {
+  padding: 3px 0;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+#footer ul.quick-links li a i {
+  margin-right: 5px;
+}
+
+#footer ul.quick-links li:hover a i {
+  font-weight: 700;
+}
+
+.footer-copy {
+  text-align: center;
+}
+
+.h6 {
+  margin: 1em 0;
+  color: white;
+}
+
+@media screen and (max-width: 1024px){
+  
+}
+
+@media screen and (max-width: 992px) {
+ 
+  .menu_bar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(251, 72, 52);
+    background: var(--color-2);
+    justify-content: space-between;
+  }
+  .menu_bar .bt-menu {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+  nav {
+    width: 80%;
+    height: calc(100% - 100px);
+    position: fixed;
+    right: 100%;
+    top: 99px;
+    margin: 0;
+    overflow: scroll;
+  }
+  nav ul li {
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+  nav ul li a {
+    display: block;
+  }
+  nav ul li:hover .children {
+    display: none;
+  }
+  nav ul li .children {
+    width: 100%;
+    position: relative;
+  }
+  nav ul li .children li a {
+    margin-left: 20px;
+  }
+  nav ul li .caret {
+    float: right;
+  }
+
+  .about-content .section-paragraph {
+   
+    width: 75%;
+   
+}
+  
+  .products-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-links {
+    gap: 4em; 
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+  body{
+    font-size: 14px;
+    --padding-container: 5em 2em;
+  }
+  .about-content .section-paragraph {
+   
+    width: 70%;
+   
+}
+  .services-content {
+   
+    grid-template-columns: repeat(1,1fr);
+    
+}
+
+
+  
+}
+
+@media screen and (max-width: 425px){
+  
+
+  body{
+    font-size: 10px;
+    --padding-container: 5em 1em;
+    
+  }
+
+  .footer-links{
+    display: block;
+    text-align: center;
+    
+    
+}
+
+#footer h5 {
+padding-left: 0;
+border-left: transparent;
+padding-bottom: 0px;
+margin-bottom: 10px;
+}
+
+  
+}
+
