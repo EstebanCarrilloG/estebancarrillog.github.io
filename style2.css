@@ -18,6 +18,9 @@
     
   }
 
+ 
+  
+
   #products-zoom{
       max-width: var(--max-width-container);
       width: var(--width-container);
@@ -84,6 +87,24 @@
     font-size: 1.5em;
 }
 
+ /* Add Animation */
+ #products-zoom {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
   #close {
     z-index: 99;
     position: absolute;
@@ -92,13 +113,13 @@
     color: var(--color-1);
     font-size: 2.9em;
     font-weight: bold;
-    transition: 0.2s;
+    transition: color 0.2s;
     
   }
   
   #close:hover,
   #close:focus {
-    color: #bbb;
+    color:var(--color-4);
     text-decoration: none;
     cursor: pointer;
   }
@@ -134,29 +155,29 @@
 
 
 .slidebar-left__content ul li{
-    margin:0.2em 0;
+    
     list-style:none;
     font-family: var(--roboto-font);
     list-style-position: inside;
-    border: 3px solid var(--color-3);
-    padding:0.9em ;
-    transition: transform 0.5s;
+    padding:0.9em;
+    transition: transform 0.2s, background 0.5s;
     
 
 }
 
 .slidebar-left__content ul li:hover{
     display:block;
-    transform:scale(1.1,1);
+    transform: translateX(1.7em);
    text-decoration: none;
    font-size: 1.3em;
    background:var(--color-4);
+   border:0px;
    
 
 }
 
 .slidebar-left__content ul li a{
-    padding-left: 2em;
+    padding-left: 1em;
     display:block;
    text-decoration: none;
    font-size: 1.3em;
@@ -165,7 +186,9 @@
    
 
 }
-
+.slidebar-left__content ul li a i{
+padding-right: 0.5em;
+}
 
 
 .slidebar-right{
