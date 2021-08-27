@@ -195,23 +195,29 @@ ul li{
   .tumbnail__content h2{
     
     font-size: 3.5em;
-    letter-spacing: 5px;
+    letter-spacing: 0.1em;
+    animation-iteration-count: 1, infinite;
+    animation-name: slidein, cambiarcolor;
+    animation-duration: 3s,9s;
+    animation-direction: alternate;
   
   }
 
- 
   
-  @keyframes sliding-vertically {
-    from {
-      margin-top: 0%;
-      
-    }
+
   
-    to {
-      margin-top: 1%;
-      
-    }
+  
+  @keyframes slidein {
+    from {margin-top: -100%;}
+    to { margin-top: 0%;}
   }
+
+  @keyframes cambiarcolor {
+    50% {text-shadow: 0px 0px 20px var(--color-4);} 
+    100% {text-shadow: 0px 0px 20px var(--color-1);}     
+  }
+
+ 
   .tumbnail__content i{
   
     font-size:1.5em;
@@ -238,6 +244,7 @@ ul li{
   text-align:justify;
   width: 60%;
   margin: 0 auto;
+  
 }
 
 .about-imgs{
@@ -250,7 +257,10 @@ ul li{
 .section-paragraph p{
   line-height: 1.7em;
   padding-bottom: 1em;
-}
+  
+  
+} 
+
 .section-paragraph p:nth-child(3){
   padding-bottom: 0.5em;
 }
