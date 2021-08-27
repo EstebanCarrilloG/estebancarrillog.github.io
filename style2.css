@@ -149,48 +149,79 @@
     background: var(--color-2);
     box-shadow: 0 0 16px 0px var(--color-4);
     
+    
 }
 
 
-.slidebar-left__content ul li{
+.slidebar-left__content #list_1 li{
     
     list-style:none;
     font-family: var(--roboto-font);
     list-style-position: inside;
-    padding:0.9em;
-    transition: transform 0.2s, background 0.5s;
+    padding:0.9em 0;
+    
     
 
 }
 
-.slidebar-left__content ul li:hover{
+.slidebar-left__content #list_1 li:hover{
     display:block;
-    transform: translateX(1.7em);
    text-decoration: none;
-   font-size: 1.3em;
-   background:var(--color-4);
    border:0px;
    
 
 }
 
 .slidebar-left__content ul li a{
-    padding-left: 1em;
-    display:block;
-   text-decoration: none;
-   font-size: 1.3em;
-   color:var(--color-3);
+    padding: 0.5em 1em 0.5em 1em;
+    display: flex;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--color-3);
+    justify-content: space-between;
+    
    
-   
-
 }
-.slidebar-left__content ul li a i{
+
+.slidebar-left__content ul li a:hover{
+    color: var(--color-4);  
+}
+
+
+
+
+.submenu-cat ul li a i{
 padding-right: 0.5em;
 }
+  
+  .submenu-cat .children-cat {
+    display: none;
+    background:var(--color-4);
+    width: 100%;
+    z-index: 1000;
+  }
+
+.slidebar-left__content ul li .children-cat li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  .submenu-cat .children-cat li a {
+    display: block;
+    transition: transform 0.9s;
+    
+  }
+
+  .submenu-cat .children-cat li a:hover {
+    transform:translateX(1em);
+    display: block;
+    color:yellow;
+  }
 
 
 .slidebar-right{
-    padding-right: 3em;
+    
     padding-bottom: 3em;
 
 }
@@ -293,7 +324,7 @@ padding-right: 0.5em;
     
 }
 
-.slidebar-left__content ul{
+.slidebar-left__content #list_1{
     position: absolute;
     z-index:96;
     background: var(--color-2);
@@ -303,11 +334,22 @@ padding-right: 0.5em;
     list-style:none;
     font-family: var(--roboto-font);
     list-style-position: inside;
-    border: 3px solid var(--color-3);
-    padding:0.9em ;
+    overflow: scroll;
     transition: transform 0.5s;
-    
+    box-shadow: 0 0 16px 0px var(--color-4);
+}
 
+.slidebar-left__content ul li:hover .children-cat {
+    display: none;
+}
+
+.slidebar-left__content ul li .children-cat {
+    width: 100%;
+    position: relative;
+}
+
+.slidebar-left__content ul li .children-cat li a {
+    margin-left:20px;
 }
 
 .slidebar-left__content h2{

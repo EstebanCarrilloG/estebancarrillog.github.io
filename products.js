@@ -107,8 +107,8 @@ function main () {
 	});
 
 	// Mostramos y ocultamos submenus
-	$('.submenu').click(function(){
-		$(this).children('.children').slideToggle();
+	$('.submenu-cat').click(function(){
+		$(this).children('.children-cat').slideToggle();
 	});
 }
   
