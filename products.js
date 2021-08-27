@@ -5,23 +5,23 @@ const baseDeDatos = [
         precio: 1.00,
         imagen: 'assets/PRODUCTOS/adaptador otg.jpg',
         descripcion: '* otg a micro usb<br/>* otg a tipo c <br/> * otg a tablet',
-        dir_url:'#'
+        palabra:'el'
     },
     {
         id: 2,
-        titulo: 'Pistola de calor',
+        titulo: 'Pistola para soldar',
         precio: 10.00,
         imagen: 'assets/PRODUCTOS/pistola calor.jpg',
         descripcion:'* 100watt SG-109 220v<br/>* Pistola de soldadura de alta velocidad y eficiencia SG109-100<br/>* Voltaje 110 / 120V AC o 220 / 240V AC<br/>* Tiempo de precalentamiento 12 segundos<br/>* Temperatura utilizada 300 Centígrados',
-        dir_url:'#'
+        palabra:'la'
     },
     {
         id: 3,
-        titulo: 'fuentes conmutadas',
+        titulo: 'Fuente(s) conmutadas fijas',
         precio: 25.00,
         imagen: 'assets/PRODUCTOS/fuentes conmutadas.jpg',
         descripcion:'* 5V/5A 24V/5A<br> * 12V/2A 24V/10A<br> * 12V/5A<br> * 12V/10A<br> * 12V/20A<br> * 12V/30A',
-        dir_url:'#'
+        palabra:'la'
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const baseDeDatos = [
         precio: 25.30,
         imagen: 'assets/PRODUCTOS/repetidor wifi.jpg',
         descripcion:' * Velocidad de transmisión: 300 Mbps<br> * Mejora la cobertura inalámbrica en todas las redes WLAN.<br> * Modo: Modo AP/Repetidor',
-        dir_url: '#',
+        palabra: 'el'
     }
 
 ];
@@ -48,7 +48,7 @@ function renderizarProductos() {
             
           
 
-           const texto_divs = '<div class = "img-price"><img src="'+info.imagen+'" alt=""><span class= "product-price">$'+info.precio+'</span></div><div class ="prouct-info"><h3 class = "section-title product-info__title">Caracteristicas</h3><p class = "product-info__info">'+ info.descripcion +'</p></div><div class ="btn-products"><a class = "cta btn-products__more" href="#"><i class="fas fa-info-circle"></i>Info</a><a class = "cta btn-products__buy" href="https://www.edeptec.com"><i class="fas fa-shopping-cart"></i>Comprar</a></div></div>'
+           const texto_divs = '<div class = "img-price"><img src="'+info.imagen+'" alt=""><span class= "product-price">$'+info.precio+'</span></div><div class ="prouct-info"><h3 class = "section-title product-info__title">Caracteristicas</h3><p class = "product-info__info">'+ info.descripcion +'</p></div><div class ="btn-products"><a class = "cta btn-products__more" href="#"><i class="fas fa-info-circle"></i>Info</a><a class = "cta btn-products__buy" href="https://wa.me/593992935738?text=Hola,me%20interesa%20comprar%20'+info.palabra+'%20'+info.titulo+'"><i class="fas fa-shopping-cart"></i>Comprar</a></div></div>'
             miNodo.innerHTML = texto_divs;
 
             
